@@ -47,6 +47,20 @@ body {
     font-size: 24pt !important;
 }
 
+.btn-cat {
+
+    height: 100px;
+    flex: 0 0 85px;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1, 2em;
+    transition: all 0.3s ease-in-out;
+}
+
+
 header {
     height: 75%;
     width: 100%;
@@ -285,6 +299,14 @@ main {
 
 
     }
+    .menu_resto{
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        .plato{
+            flex: 0 0 calc(50% -10px);
+        }
+
+    }
 
 }
 
@@ -300,7 +322,7 @@ main {
 
 .main_resto {
     height: 100%;
-    background-color: yellow;
+    /* background-color: yellow; */
     padding: 0;
 
     & .link_resto {
@@ -312,13 +334,32 @@ main {
         & .pic_resto {
             height: 80%;
             width: 100%;
-            background-color: #ce1c1c;
+            /* background-color: #ce1c1c; */
+            background-image: url(../img/descarga.jfif);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            
+
+            
+        }
+
+        &.pic_resto::after{
+            content: '';
+            position: absolute;
+            height:100% ;
+            width: 100%;
+            background:linear-gradient(180 deg,rgba(0,0,0,0),rgb(230,230,230));
         }
 
         & .name_resto {
             height: 20%;
             width: 100%;
-            background-color: aqua;
+            background-color:white;
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            padding-top: 20px;
         }
 
         & .puntu_resto {
@@ -342,24 +383,82 @@ main {
 }
 
 nav.menu_inferior {
-    background-color: aquamarine;
+    background-color:white;
     width: 100%;
     height: 60px;
     position: fixed;
     bottom: 0;
     display: flex;
 
-    button {
+    a{
+        transition: all 0.1s ease-in-out;
         flex: 0 0 33.33%;
         border: 0;
         background-color: transparent;
         cursor: pointer;
         color: gray;
+        text-align: center;
+        line-height: 45px;
     }
 
-    button:hover {
+    a:hover {
+        color: black;
+        border-top: solid 3px rgb(10, 110, 10);
+        font-weight: 400;
+    }
+
+    
+    a:active {
         color: black;
         border-top: solid 3px rgb(10, 110, 10);
         font-weight: 700;
+    }
+}
+
+.datos{
+
+    display: flex;
+    width: 100%;
+    justify-content:space-around ;
+    
+}
+
+.desresto{
+    padding: 20px;
+    padding-top: 30px;
+}
+p{
+    padding: 30px 20px 20px 20px;
+}
+/* --------------------------------------- */
+.cerrarMenu{
+    position: sticky;
+    top: 0;
+    width:100% ;
+    height: 40px;
+    padding: 10px;
+    background-color:white ;
+}
+
+.header_menu{
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.close{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.menu_resto{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 70px;
+    .plato{
+        height: 100px;
+        width:100% ;
+        background-color:grey ;
     }
 }
