@@ -19,6 +19,7 @@ body {
 
 ::-webkit-scrollbar {
     height: 5px;
+    width: 20px;
 }
 
 ::-webkit-scrollbar-track {
@@ -26,7 +27,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #0d3ec4;
+    background: #818aa3;
     border-radius: 3px;
 }
 
@@ -34,14 +35,7 @@ body {
     background: #ce1c1c;
 }
 
-::-webkit-scrollbar-thumb {
-    background: green;
-    border-radius: 3px;
-}
 
-::-webkit-scrollbar-thumb:hover {
-    background: green;
-}
 
 .f30 {
     font-size: 24pt !important;
@@ -143,7 +137,7 @@ header {
     display: flex;
     box-shadow: 10px 10px 20px -10px rgb(0, 0, 0, 0.418);
     z-index: 2;
-
+    bottom: 310px;
     .icono {
         width: 40px;
         background-color: black;
@@ -204,7 +198,7 @@ main {
         .resto {
             width: 100%;
             position: relative;
-            flex: 0 0 160px;
+            flex: 0 0 200px;
             /* background-color: aqua; */
 
             .distancia {
@@ -230,15 +224,14 @@ main {
             }
 
             .imagen_resto {
-                background-image: url(../img/plato2.jpg);
-                background-color: red;
-                overflow: auto;
+
+                overflow: hidden;
                 background-position: center;
                 background-size: cover;
                 position: absolute;
                 height: auto;
-                height: 100%;
-                width: 45%;
+                height:200px;
+                width: 200px;
                 float: left;
 
             }
@@ -291,7 +284,7 @@ main {
 
             .resto {
                 background-color: ghostwhite;
-                height: 160px;
+                height: 200px;
                 flex: 0 0 calc(50% - 10px);
             }
         }
@@ -336,7 +329,7 @@ main {
         & .pic_resto {
             height: 80%;
             width: 100%;
-            /* background-color: #ce1c1c; */
+            
             position: relative;
 
             & img {
@@ -484,11 +477,6 @@ p {
                 height: 100%;
                 position: relative;
                 border-radius: 15px 0;
-
-                background-image: url(/img/plato3.jpg);
-                background-size: cover;
-                background-position: center;
-
                 .precio_plato {
                     position: absolute;
                     background-color: aquamarine;
@@ -523,10 +511,7 @@ p {
     height: 100%;
     position: relative;
     border-radius: 15px 0;
-    background-image: url(/img/plato3.jpg);
-    background-size: cover;
-    background-position: center;
-
+    
     .precio_plato {
         position: absolute;
         font-weight: bold;
@@ -637,4 +622,10 @@ p {
 }
 .p0{
     padding: 0!important;
+}
+
+.ajustar{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
 }
