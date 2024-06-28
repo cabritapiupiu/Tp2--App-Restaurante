@@ -2,7 +2,7 @@ function Plato(id) {
     localStorage.setItem("plato", id);
 }
 
-// Conecto con el archivo JSON
+// Conecto con el archivo JSON 
 fetch('json/resto_arg.json')
     // Espero respuesta y la convierto a JSON
     .then(response => response.json())
