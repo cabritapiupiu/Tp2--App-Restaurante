@@ -12,35 +12,37 @@
 
 <body>
     <main class="main_resto">
-        <section class="link_resto">
+        <section class="link_plato">
             <div class="pic_plato">
-                <div class="contenedor_img">
-                    <img class="img" src="/img/plato4.jpg   " alt="">
-                </div>
+                <img class="pic" src="./img/plato4.jpg" alt="">
             </div>
             <div class="name_resto">
                 <div class="vaina">
-                    <h2>
+                    <h1 id="veganos">
                         comida de veganos
-                    </h2>
-                    <h5 class="gris_txt">preparado por y para veganos </h5>
+                    </h1>
+                    <h3 class="gris_txt">preparado por y para veganos </h3>
                 </div>
-                <div class="precio verde_txt">
+                <div class="precio verde_txt" id="costo">
                     <i class="iconos">attach_money</i>
                     <i class="iconos">attach_money</i>
                     <i class="iconos gris_txt">attach_money</i>
                 </div>
 
+                <div class="punto">
+                    <h2 class="puntu_plato ">$8.99</h2>
+                </div>
+
+                
+                
             </div>
 
-            <div class="puntu_resto flex">$8.99</div>
-
-        </section>
-        <section class="desresto">
-
-            <p class="p10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt error veritatis commodi
-                tempora distinctio, numquam doloribus aperiam beatae velit, dolore inventore magni nam officiis
-                aspernatur corrupti iusto atque ipsam fugit?</p>
+            
+            <div class="desresto">
+                <p class="p10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt error veritatis commodi
+                    tempora distinctio, numquam doloribus aperiam beatae velit, dolore inventore magni nam officiis
+                    aspernatur corrupti iusto atque ipsam fugit?</p>
+            </div>
         </section>
     </main>
     <nav class="agregar">
@@ -51,10 +53,10 @@
                 <button id="sumar" class="iconos botonCarito" onclick="sumar()">add</button>
             </div>
             <button class="btn_agregar"> <i class="iconos">post_add</i>agregar pedido</button>
-            </div>
+        </div>
     </nav>
     <span></span>
-    <script src="/js/plato.js"></script>
+    <script src="js/plato.js"></script>
 </body>
 
 </html>

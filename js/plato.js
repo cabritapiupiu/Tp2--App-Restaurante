@@ -5,17 +5,20 @@ fetch('json/resto_arg.json')
     // Cuando obtengo la conversión a un array de objetos, puedo comenzar a utilizarlos
     .then(data => {
         data.forEach(resto=>{
-            if (resto.id == localStorage.getItem("Resto")) {
+            if (resto.id == localStorage.getItem("num_resto")) {
                 resto.menu.forEach(plato=>{
+                  console.log(` ${plato.id}= ${ localStorage.getItem("plato")} `)
                     if (plato.id == localStorage.getItem("plato")) {
-                        let vegano = (plato.vegan === "true") ? "Apto para veganos" : "No es apto para veganos"
-                        document.querySelector(".contenedor_img").querySelector("img").setAttribute("src",plato.image)
-                        document.querySelector(".vaina").querySelector("h2").innerText = vegano
-                        document.querySelector(".vaina").querySelector("h5").innerText = plato.plato
-                        document.querySelector(".vaina").querySelector(".precio").innerHTML =  `
+                        let vegano = (plato.vegan == "true") ? "Apto para veganos" : "No es apto para veganos"
+                        document.querySelector(".pic_plato").querySelector("img").setAttribute("src",plato.image)
+                        document.getElementById("veganos").innerText=vegano
+                        console.log(plato.id)
+                        document.querySelector(".vaina").querySelector("h1").innerText = vegano
+                        document.querySelector(".vaina").querySelector("h3").innerText = plato.plato
+                        document.getElementById("costo").innerHTML =  `
                         ${`<i class="iconos">attach_money</i>`.repeat(plato.costo)}
                         ${`<i class="iconos gris_txt">attach_money</i>`.repeat(3- plato.costo)}`
-                        document.querySelector(".puntu_resto").innerText = plato.price
+                        document.querySelector(".puntu_plato").innerText = plato.price
                         document.querySelector(".desresto").querySelector("p").innerText = plato.description
                     }
                 })

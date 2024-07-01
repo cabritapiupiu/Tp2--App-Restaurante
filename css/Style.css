@@ -519,20 +519,7 @@ background-color: aquamarine;
 
 
 
-.pic_plato {
-    height: 80%;    
-    width: 100%;
-    /* background-color: #ce1c1c; */
-    position: relative;
 
-    & .contenedor_img {
-        width: 100%;
-        height: 100%;
-        
-        background-size: cover;
-        background-position: center;
-    }
-}
 
 
 .link_resto {
@@ -685,4 +672,57 @@ background-color: aquamarine;
         }
    }
 
+}
+
+
+.link_plato{
+    height: 80%;    
+    width: 100%;
+    
+    & .pic_plato {
+        height: 60%;    
+        width: 100%;
+        
+        position: relative;
+        & .pic{
+            width: 100%;            
+            height: 100%;
+            object-fit: contain;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+    & .name_resto{
+        height:20% ;
+        width: 100%;
+        
+        position: relative;
+        & .precio{
+            position: absolute;
+            width: auto;
+            height: auto;
+            right: 20px;
+        }
+        & .vaina{
+            width: auto;
+            height: auto;
+        }
+        .punto{
+            right: 20px;
+            bottom:120px ;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: aquamarine;            
+        }
+        
+        & .puntu_plato{            
+            
+            position: absolute;
+            right: 9px;
+            bottom: 30px;
+        }
+    }
 }
